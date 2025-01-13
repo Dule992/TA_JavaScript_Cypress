@@ -1,0 +1,47 @@
+{
+  "name": "cypress-js-project",
+  "version": "1.0.0",
+  "description": "Cypress with JavaScript project",
+  "main": "index.js",
+  "type": "commonjs",
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "axios": "^1.7.9",
+    "cypress": "^13.17.0",
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "eslint": "^9.17.0",
+    "globals": "^15.14.0",
+    "mocha": "^11.0.1",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0",
+    "prettier": "^3.4.2"
+  },
+  "scripts": {
+    "build": "npm install",
+    "lint": "npx eslint eslint.config.cjs",
+    "lint:fix": "npx eslint --fix",
+    "e2e:chrome": "cypress run --browser chrome",
+    "cy:open": "cypress open --e2e -b chrome",
+    "cy:parallel": "cypress-parallel -s e2e:chrome -t 2 -d 'cypress/e2e/*.js' -r 'cypress-mochawesome-reporter' --reporterModulePath ../node_modules/cypress-multi-reporters -b chrome"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.10.5",
+    "cypress-parallel": "^0.14.0",
+    "cypress-recurse": "^1.35.3",
+    "dotenv": "^16.4.7",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-chai-friendly": "^1.0.1",
+    "eslint-plugin-cypress": "^4.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "process": "^0.11.10",
+    "yarn": "^1.22.22"
+  },
+  "exports": {
+    "mochawesome": "./mochawesome.js"
+  }
+}
