@@ -12,6 +12,7 @@ module.exports = [
                 cy: "readonly", // Add cy as a global variable
                 Cypress: "readonly", // Add Cypress as a global variable
                 require: "readonly", // Add require as a global variable
+                expect: "readonly", // Add expect as a global variable
             },
         },
         rules: {

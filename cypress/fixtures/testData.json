@@ -1,0 +1,11 @@
+{
+    "productId": "1",
+    "productName": "Sauce Labs Bolt T-Shirt",
+    "productPrice": "$15.99",
+    "firstName": "Test",
+    "lastName": "User",
+    "zipCode": "32258",
+    "userNameErrorMessage": "Epic sadface: Username is required",
+    "passwordErrorMessage": "Epic sadface: Password is required",
+    "invalidDataErrorMessage": "Epic sadface: Username and password do not match any user in this service"
+}

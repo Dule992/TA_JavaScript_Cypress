@@ -29,6 +29,7 @@ module.exports = defineConfig({
     viewportHeight: 1080,
     specPattern: ['**/*.cy.js'],
     chromeWebSecurity: false,
+    video: true,
     retries: {
       runMode: 1,
       openMode: 1
@@ -36,6 +37,7 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
       require('cypress-mochawesome-reporter/plugin')(on);
+      require('@cypress/grep/src/plugin')(config);
       return config;
     },
     env: {

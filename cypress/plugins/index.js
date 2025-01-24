@@ -1,5 +1,6 @@
 const { merge } = require('mochawesome-merge');
 const generator = require('mochawesome-report-generator');
+const logToOutput = require('cypress-log-to-output');
 
 module.exports = (on, config) => {
     on('after:run', async (results) => {
@@ -21,6 +22,6 @@ module.exports = (on, config) => {
     });
 
     // Other event listeners or plugin logic can go here
-
+    logToOutput.install(on);
     return config;
 };

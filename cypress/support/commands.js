@@ -23,3 +23,17 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+// Custom Command to select a random element from a list of elements
+Cypress.Commands.add('getRandomElement', (elements) => {
+    // Get all elements matching the selector
+    elements.then($elements => {
+      // Calculate a random index
+      const randomIndex = Math.floor(Math.random() * $elements.length);
+  
+      // Log the random index for debugging purposes
+      cy.log(`Random Index: ${randomIndex}`);
+
+      return randomIndex;
+    });
+  });
