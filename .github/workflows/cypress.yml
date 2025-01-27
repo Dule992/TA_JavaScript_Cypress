@@ -31,6 +31,12 @@ jobs:
           VALID_USERNAME: ${{ secrets.CYPRESS_USERNAME }}
           VALID_PASSWORD: ${{ secrets.CYPRESS_PASSWORD }}
 
+     - name: Upload Mochawesome report
+        uses: actions/upload-artifact@v4
+        with:
+          name: mochawesome-report
+          path: cypress/reports/html/index.html     
+
       - name: Upload Cypress videos
         uses: actions/upload-artifact@v4
         with:
