@@ -41,9 +41,9 @@ npm install
 
 ## Env file
 
-The project uses environment variables to manage sensitive data such as usernames and passwords. You can set these variables in a .env file at the root of the project.
+The project uses environment variables to manage sensitive data such as usernames and passwords. You can set these variables in a .env file at the project's root.
 
 Example:
-username=your-username
-password=your-password
-BASE_URL=https://your-base-url.com
+- username=your-username
+- password=your-password
+- BASE_URL=https://your-base-url.com
