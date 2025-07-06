@@ -1,4 +1,4 @@
-# cypress-js-project
+# TA Project Java-Cypress
 
 This project demonstrates the implementation of Cypress for end-to-end testing using JavaScript.
 
